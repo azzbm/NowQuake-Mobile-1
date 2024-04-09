@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" >
+<widget id="" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>NowQuake</name>
     <description>Sample Apache Cordova App</description>
     <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
@@ -10,6 +10,7 @@
         <preference name="teamID" value="" />
     </platform>
     <platform name="ipados">
+        <preference name="teamID" value="" />
         <preference name="TargetDevice" value="tablet" />
         <!-- 设置目标设备为平板设备 -->
         <preference name="DeploymentTarget" value="14.0" />
