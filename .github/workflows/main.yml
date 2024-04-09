@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Install Cordova
+        run: npm install -g cordova
+
       - name: Install Dependencies
         run: npm install
 
