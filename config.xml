@@ -7,6 +7,7 @@
     </author>
     <content src="index.html" />
     <platform name="ipados">
+        <preference name="teamID" value="" />
         <preference name="TargetDevice" value="tablet" />
         <!-- 设置目标设备为平板设备 -->
         <preference name="DeploymentTarget" value="14.0" />
