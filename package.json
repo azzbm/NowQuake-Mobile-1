@@ -18,6 +18,6 @@
     ]
   },
   "devDependencies": {
-    "cordova-ios": "^7.1.0"
+    "cordova-ios": "^8.0.0"
   }
 }
