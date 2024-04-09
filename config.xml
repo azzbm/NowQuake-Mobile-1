@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.nowquake.nowquake" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>NowQuake</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <platform name="ipados">
+        <preference name="TargetDevice" value="tablet" />
+        <!-- 设置目标设备为平板设备 -->
+        <preference name="DeploymentTarget" value="14.0" />
+        <!-- 设置部署目标为iPadOS 14.0或更高版本 -->
+        <preference name="StatusBarOverlaysWebView" value="false" />
+        <!-- 禁用状态栏覆盖web视图 -->
+        <preference name="StatusBarBackgroundColor" value="#000000" />
+        <!-- 设置状态栏背景颜色 -->
+        <preference name="orientation" value="landscape" />
+        <!-- 设置应用程序的初始方向为横屏 -->
+        <config-file parent="UISupportedInterfaceOrientations" platform="ipados" target="*-Info.plist">
+            <array>
+                <string>UIInterfaceOrientationLandscapeLeft</string>
+                <string>UIInterfaceOrientationLandscapeRight</string>
+            </array>
+            <!-- 只支持横屏方向 -->
+        </config-file>
+        <config-file parent="UIViewControllerBasedStatusBarAppearance" platform="ipados" target="*-Info.plist">
+            <false/>
+            <!-- 禁用基于视图控制器的状态栏外观 -->
+        </config-file>
+        <!-- 可以根据需要添加其他iPadOS特定配置 -->
+    </platform>
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+</widget>
