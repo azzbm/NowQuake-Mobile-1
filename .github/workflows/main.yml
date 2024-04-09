@@ -1,4 +1,4 @@
-name: Build and Deploy iOS App
+name: Build and Deploy iPadOS App
 
 on:
   push:
@@ -24,11 +24,12 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Build iOS App
+      - name: Build iPadOS App
         run: |
           cordova platform add ios
-          cordova build ios --device
-
+          cordova platform add ios@latest
+          cordova build ios --device --target=ipad
+          
       - name: Archive artifacts
         uses: actions/upload-artifact@v2
         with:
