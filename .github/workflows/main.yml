@@ -21,17 +21,21 @@ jobs:
       - name: Install Cordova
         run: |
           npm install -g cordova
+          npm fund
           npm install cordova-ios@latest --save-dev  # 更新 cordova-ios 到最新版本
+          npm fund
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          npm install
+          npm fund
 
       - name: Build iPadOS App
         run: |
           cordova platform add ios
           cordova prepare ios --buildFlag="-UseModernBuildSystem=0"
           cordova build ios --device --target=ipad --buildFlag="-UseModernBuildSystem=0"
-      
+
       - name: Archive artifacts
         uses: actions/upload-artifact@v2
         with:
