@@ -29,7 +29,12 @@ jobs:
           cordova platform add ios
           cordova prepare ios --buildFlag="-UseModernBuildSystem=0"
           cordova build ios --device --target=ipad --buildFlag="-UseModernBuildSystem=0"
-          
+      
+      - name: Sign IPA
+        run: |
+          # 在这里执行手动签名操作，例如使用 codesign 或者其他工具进行签名
+          # 确保你的签名操作包括选择正确的开发团队和签名证书
+
       - name: Archive artifacts
         uses: actions/upload-artifact@v2
         with:
