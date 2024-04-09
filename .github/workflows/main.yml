@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '21'
 
       - name: Install Cordova
         run: npm install -g cordova
@@ -24,7 +24,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Build iOS App
+      - name: Build iPadOS App
         run: |
           cordova platform add ios
           cordova prepare ios --buildFlag="-UseModernBuildSystem=0"
